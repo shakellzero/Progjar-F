@@ -36,10 +36,10 @@ class Client(threading.Thread):
 
 def main():
 	client1 = Client(1)
-	client2 = Client(2)
+	#client2 = Client(2)
 
 	client1.start()
-	client2.start()
+	#client2.start()
 
 if __name__=="__main__":
 	main()
