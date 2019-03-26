@@ -35,7 +35,7 @@ class Server(threading.Thread):
 
 	def run(self):
 		host = socket.gethostname()
-		port = 8000
+		port = 9000
 		self.my_socket.bind((host, port))
 		while True:
 			data, self.client_address = self.my_socket.recvfrom(1024)

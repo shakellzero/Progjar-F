@@ -13,7 +13,7 @@ class Client(threading.Thread):
 
 	def run(self):
 		host = socket.gethostname()
-		port = 8000
+		port = 9000
 		self.my_socket.sendto('DATA', (host, port))
 		self.my_socket.settimeout(2)
 		size = os.stat('file.jpg').st_size
@@ -36,8 +36,10 @@ class Client(threading.Thread):
 
 def main():
 	client1 = Client(1)
+	client2 = Client(2)
 
 	client1.start()
+	client2.start()
 
 if __name__=="__main__":
 	main()
