@@ -43,6 +43,7 @@ while True:
 				print ' receive success'
 		else:
 			#message=sys.stdin.readline()
+			print "Masukkan -> SEND + nama file"
 			message=raw_input()
 			operand,filename=message.split(' ', 1)
 			server.send(filename)
